@@ -8,6 +8,10 @@ x = re.sub("rain", "cold", str)
 print(x)
 
 str = "The rain in Spain"
+x = re.sub("\s", "9", str)
+print(x)
+
+str = "The rain in Spain"
 x = re.sub("\s", "9", str,2)
 print(x)
 
