@@ -1,5 +1,5 @@
 
-fs=open("C://Users//Ramesh//Desktop//Python//pythonlist.txt","r")
+fs=open("C://Users//E004373//Desktop//Python//python.txt","r")
 
 
 # print(fs.readline())      # Read one line of the file:
@@ -10,6 +10,6 @@ fs=open("C://Users//Ramesh//Desktop//Python//pythonlist.txt","r")
 
 #print(fs.readline(2))
 
-print(fs.read(5))
+print(fs.read())
 
 fs.close()
