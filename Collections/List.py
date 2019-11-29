@@ -27,4 +27,31 @@ Clist = ["apple", "banana", "cherry"]
 Clist[1] = "blackcurrant"
 print(Clist)
 
+# Loop Through a List
+
+
+llist = ["apple", "banana", "cherry"]
+for x in llist:
+  print(x)
+
+
+# Check if Item Exists
+
+checklist = ["apple", "banana", "cherry"]
+if "apple" in checklist:
+    print("Yes, 'apple' is in the fruits list")
+
+# List Length
+
+lenlist = ["apple", "banana", "cherry"]
+print(len(lenlist))
+
+# Add Items
+
+Addlist = ["apple", "banana", "cherry"]
+Addlist.append("orange")
+print(Addlist)
+
+
+
 
