@@ -2,7 +2,7 @@
 from selenium import webdriver
 import time
 
-driver=webdriver.Chrome(executable_path="D:\\chromedriver_win32\\chromedriver.exe")
+driver=webdriver.Chrome(executable_path="C:\\Drivers\\chromedriver.exe")
 
 driver.maximize_window()
 
@@ -16,18 +16,18 @@ status=driver.find_element_by_id("profession-0").is_selected()
 
 print(status)
 
-time.sleep(9)
+time.sleep(5)
 
-driver.find_element_by_id("profession-0").click()
+if status == False:
+    print("Check box is not Selected")
+    driver.find_element_by_id("profession-0").click()
+else:
+    print("Check box is Selected")
 
-time.sleep(9)
+time.sleep(5)
 
 status=driver.find_element_by_id("profession-0").is_selected()
 
 print(status)
-
-time.sleep(5)
-
-
 
 driver.close()
