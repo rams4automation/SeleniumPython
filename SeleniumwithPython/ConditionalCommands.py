@@ -1,36 +1,40 @@
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+
 import time
 
-driver=webdriver.Chrome(executable_path="D:\\chromedriver_win32\\chromedriver.exe")
+driver=webdriver.Chrome(executable_path="C:\\Drivers\\chromedriver.exe")
+
+driver.maximize_window()
 
 driver.get("http://newtours.demoaut.com/")
 
 driver.maximize_window()
 
-user_ele=driver.find_element_by_name("userName")
+UserEle=driver.find_element_by_name("userName")
 
-print(user_ele.is_displayed())
+print(UserEle.is_displayed())
 
-print(user_ele.is_enabled())
+print(UserEle.is_enabled())
 
-pwd_ele=driver.find_element_by_name("password")
+time.sleep(10)
 
-print(pwd_ele.is_displayed())
+PwdeEle=driver.find_element_by_name("password")
 
-print(pwd_ele.is_enabled())
+print(PwdeEle.is_displayed())
 
-############ Enter UserName and Password
+print(PwdeEle.is_enabled())
 
-user_ele.send_keys("mercury")
-pwd_ele.send_keys("mercury")
+UserEle.send_keys("mercury")
+PwdeEle.send_keys("mercury")
 
 driver.find_element_by_name("login").click()
 
 time.sleep(5)
 
 roundtripbutton=driver.find_element_by_name("tripType")
+
+time.sleep(10)
 
 print(roundtripbutton.is_selected())
 

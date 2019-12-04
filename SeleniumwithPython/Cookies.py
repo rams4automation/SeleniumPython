@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-driver=webdriver.Chrome(executable_path="D:\\chromedriver_win32\\chromedriver.exe")
+driver=webdriver.Chrome(executable_path="C:\\Drivers\\chromedriver.exe")
 
 driver.maximize_window()
 
@@ -10,6 +10,7 @@ driver.implicitly_wait(10)
 driver.get("https://www.amazon.in/")
 
 cokies=driver.get_cookies()
+
 print(len(cokies))
 
 print(cokies)
@@ -19,7 +20,9 @@ print(cokies)
 driver.delete_all_cookies()
 
 cokies=driver.get_cookies()
+
 print(len(cokies))
+
 print(cokies)
 
 driver.close()
