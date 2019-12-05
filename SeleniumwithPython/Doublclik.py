@@ -1,22 +1,24 @@
+
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver import ActionChains
 import time
+from selenium.webdriver import ActionChains
 
-driver=webdriver.Chrome(executable_path="D:\\chromedriver_win32\\chromedriver.exe")
 
-driver.maximize_window()
+driver=webdriver.Chrome(executable_path="C:\\Drivers\\chromedriver.exe")
 
 driver.implicitly_wait(10)
 
 driver.get("https://artoftesting.com/sampleSiteForSelenium")
 
-time.sleep(9)
+driver.maximize_window()
 
-dblelement=driver.find_element_by_id("dblClkBtn")
+time.sleep(5)
+
+dblElement=driver.find_element_by_id("dblClkBtn")
 
 action=ActionChains(driver)
-action.double_click(dblelement).perform()
+
+action.double_click(dblElement).perform()
 
 time.sleep(5)
 
